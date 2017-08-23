@@ -1,0 +1,64 @@
+{
+	"libraries": {
+		"prerequisites": [
+			"//code.jquery.com/jquery-2.1.3.min.js",
+			"//cdn.jsdelivr.net/momentjs/2.15.1/moment-with-locales.min.js",
+			"//cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.min.js"
+		],
+		"sdk": {
+			"official": [
+				"//api.openrainbow.com/sdk/web/libs/vendors-sdk.min.js",
+				"//api.openrainbow.com/sdk/web/libs/rainbow-sdk.min.js"
+			],
+			"default": "official"
+		},
+		"after": []
+	},
+	"app": {
+		"bootstrap": "sample",
+		"key": {
+			"appID": "5978373bf8abe8ad97357f02",
+			"appSecret": ""
+		},
+		"js": [
+			"./resources/angular/js/MainController.js",
+			"./resources/angular/js/application.js",
+			"./resources/angular/js/sdkSampleApp.js",
+			"./resources/angular/js/components/controller/controllerCmp.js",
+			"./resources/angular/js/components/contact/contactCmp.js",
+			"./resources/angular/js/components/media/mediaCmp.js",
+			"./resources/angular/js/components/spectrum/spectrumCmp.js",
+			"./resources/angular/js/components/connection/connectionCmp.js",
+			"./resources/angular/js/components/presence/presenceCmp.js",
+			"./resources/angular/js/components/contacts/contactsCmp.js",
+			"./resources/angular/js/components/contacts/contactCmp.js",
+			"./resources/angular/js/components/user/userCmp.js",
+			"./resources/angular/js/components/conversations/conversationsCmp.js",
+			"./resources/angular/js/components/conversations/conversationCmp.js",
+			"./resources/angular/js/components/conversations/messageCmp.js"
+		],
+		"css": [
+			"//fonts.googleapis.com/css?family=Open+Sans:400,300,600&subset=latin,cyrillic-ext,cyrillic",
+			"resources/angular/styles/sdkSampleApp.css",
+			"./resources/angular/js/components/contact/contactCmp.css",
+			"./resources/angular/js/components/controller/controllerCmp.css",
+			"./resources/angular/js/components/media/mediaCmp.css",
+			"./resources/angular/js/components/spectrum/spectrumCmp.css",
+			"resources/angular/js/components/connection/connectionCmp.css",
+			"resources/angular/js/components/presence/presenceCmp.css",
+			"resources/angular/js/components/contacts/contactsCmp.css",
+			"resources/angular/js/components/contacts/contactCmp.css",
+			"resources/angular/js/components/user/userCmp.css",
+			"resources/angular/js/components/conversations/conversationsCmp.css",
+			"resources/angular/js/components/conversations/conversationCmp.css",
+			"resources/angular/js/components/conversations/messageCmp.css"
+		]
+	},
+	"settings": {
+		"verboseLog": true,
+		"disableCache": true,
+		"stopOnError": true,
+		"enableLoader": true,
+		"useAngularEvents": true
+	}
+}

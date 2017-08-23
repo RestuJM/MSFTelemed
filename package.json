@@ -4,6 +4,10 @@
     "prod": "gulp --production",
     "dev": "gulp watch"
   },
+  "dependencies": {
+    "@angular/compiler": "^4.3.5",
+    "@angular/core": "^4.3.5"
+  },
   "devDependencies": {
     "bootstrap-sass": "^3.0.0",
     "gulp": "^3.9.1",

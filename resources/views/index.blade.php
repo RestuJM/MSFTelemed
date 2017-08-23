@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="starter" lang="{{ config('app.locale') }}">
+<html ng-app="sample"  lang="{{ config('app.locale') }}">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,87 +10,51 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
-    <link href="{{ URL::to('resources/build/css/app.css') }}" rel="stylesheet" type="text/css">
-
-    <!-- Styles -->
-    <style>
-        html, body {
-            background-color: #fff;
-            color: #636b6f;
-            font-family: 'Raleway', sans-serif;
-            font-weight: 100;
-            height: 100vh;
-            margin: 0;
-        }
-
-        .full-height {
-            height: 100vh;
-        }
-
-        .flex-center {
-            align-items: center;
-            display: flex;
-            justify-content: center;
-        }
-
-        .position-ref {
-            position: relative;
-        }
-
-        .top-right {
-            position: absolute;
-            right: 10px;
-            top: 18px;
-        }
-
-        .content {
-            text-align: center;
-        }
-
-        .title {
-            font-size: 84px;
-        }
-
-        .links > a {
-            color: #636b6f;
-            padding: 0 25px;
-            font-size: 12px;
-            font-weight: 600;
-            letter-spacing: .1rem;
-            text-decoration: none;
-            text-transform: uppercase;
-        }
-
-        .m-b-md {
-            margin-bottom: 30px;
-        }
-    </style>
+        <title>Rainbow SDK for Web</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" type="image/png" href="./res/appLogo.png"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600&subset=latin,cyrillic-ext,cyrillic">
+       <!--  <link rel="stylesheet" href="./resources/angular/js/components/connection/connectionCmp.css"> -->
+       
+        <script src="//cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/es6-promise/4.0.5/es6-promise.min.js"></script>
+       <!--  <script src="./resources/angular/js/components/connection/connectionCmp.js"></script> -->
 </head>
-<body>
-<div class="flex-center position-ref full-height" ng-controller="MainCtrl">
-
-    @if (Route::has('login'))
-        <div class="top-right links">
-            @if (Auth::check())
-                <a href="{{ url('/home') }}">Home</a>
-            @else
-                <a href="{{ url('/login') }}">Login</a>
-                <a href="{{ url('/register') }}">Register</a>
-            @endif
-        </div>
-    @endif
+    <body>
+      <!-- Demo specific part -->
+  
+<div class="flex-center position-ref full-height" ng-controller="sampleController">   
 
     <div class="content">
-        <div class="view page page-home" ng-view></div>
+        <div class="app-contacts">
+            <rbx-contacts name="rbxContacts"></rbx-contacts>
+        </div>
+        
+        <div class="app-user">
+            <rbx-connection name="rbxConnection"></rbx-connection>
+            <rbx-user name="rbxUser"></rbx-user>
+            <rbx-presence name="rbxPresence"></rbx-presence>
+            <rbx-contact name="rbxContactCall"></rbx-contact>
+        </div>
+
+        <div class="app-container">
+            <rbx-conversations name="rbxConversations"></rbx-conversations>
+        </div>
+
+       
+
     </div>
 </div>
 
 <!-- Angular Init Here -->
-<script src="{{ URL::to('resources/build/js/components.js') }}"></script>
+
+<script src="//api.openrainbow.com/sdk/web/libs/loader-sdk.min.js" data-main="{{ asset('config.json') }}"></script>
 
 <!-- App JS Files - All Controllers -->
-<script src="{{ URL::to('resources/angular/js/application.js') }}"></script>
-<script src="{{ URL::to('resources/angular/js/MainController.js') }}"></script>
+<script src="{{ asset('resources/angular/js/application.js') }}"></script>
+<script src="{{ asset('resources/angular/js/MainController.js') }}"></script>
 
 </body>
 </html>
